@@ -1,0 +1,17 @@
+*************************************************************************************** 
+* Versions * 
+*************************************************************************************** 
+This update contains improvements and fixes several problems such as follows :
+
+|*|version 1.0.12.1724
+
+
+* New possibility to select patients for its name 
+* New fields for entering Numerto health card of the patient 
+* New ability to print templates for Word documents 
+* New browser to obtain the blister packs delivered by category
+* New option to enable or disable Treatments 
+* New possibility of draw shape of the capsules and Tablets
+ 
+|*|version 1.0.11.1414 
+* New possibility of introducing in returns the code of medication returned

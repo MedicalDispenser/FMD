@@ -1,0 +1,19 @@
+*************************************************************************************** 
+|||* Versions                                                                         * 
+*************************************************************************************** 
+
+cette mise à jour contient améliorations et résout plusieurs problèmes comme indiqué ci-après :
+
+|*|version 1.0.12.2538
+* Y compris les consentements des patients et des médecins pour la France
+
+|*|version 1.0.12.1724
+* Nouvelle possibilité de sélectionner patients par son nom 
+* Nouveaux champs pour introduire Numerto de carte sanitaire  du patient 
+* Nouvelle possibilité d'imprimer modèles de documents Word 
+* Nouveau listao pour obtenir des plaquettes thermoformées livrés par catégorie
+* Nouvelle possibilité d'activer ou désactiver traitements 
+* Nouvelle possibilité de dessiner CARACTERISTIQUES DES coprimidos et les capsules 
+
+|*|version 1.0.11.1414
+* nouvelle possibilité d'introduire dans retours le code de médicament rentrés

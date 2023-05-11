@@ -1,0 +1,17 @@
+************************************************** *************************************
+* Versioni *
+************************************************** *************************************
+Questo aggiornamento contiene miglioramenti e risolve diversi problemi come i seguenti:
+
+|*|versione 1.0.12.1724
+
+
+* Nuova possibilità di selezionare i pazienti per il suo nome
+* Nuovi campi per l'inserimento di Numerto tessera sanitaria del paziente
+* Nuova possibilità di stampare modelli per documenti Word
+* Nuovo browser per ottenere i blister consegnati per categoria
+* Nuova opzione per abilitare o disabilitare i Trattamenti
+* Nuova possibilità di disegnare la forma delle capsule e delle compresse
+ 
+|*|versione 1.0.11.1414
+* Nuova possibilità di inserire nei resi il codice del farmaco restituito
