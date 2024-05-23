@@ -4,10 +4,44 @@
 
 cette mise à jour contient améliorations et résout plusieurs problèmes comme indiqué ci-après :
 
+|*|Version 3.2403.2.3027
+
+* Nombre de blisters livrés sur le bon de livraison
+* Afficher les modifications apportées à l'historique du traitement
+* Inclure la température et l'humidité dans le chargement manuel
+* Valider les blisters par catégorie avec des patients sélectionnés
+* Livraison par catégorie blisters sélectionnés
+* Reprendre l'inventaire des médicaments non enregistrés en retour
+* Indiquer sur l'étiquette la date de fin du traitement non emboîtable
+* Traçabilité et interrogation sur le lot de blisters utilisé
+* Récupérer les stocks de médicaments d'un blister jeté
+* Télécharger les documents dans le dossier correspondant au lieu de la racine
+
+|*|Version 3.2401.0.2851
+
+* Nouveau rapport imprimable en feuille simple ou double
+* Nouveau rapport sur la production et la livraison de blisters
+
+|*|Version 3.2310.3.2770
+
+* Intégration avec Datexa
+* Modification de la configuration système requise (voir dans le manuel)
+* Corrections de bogues FMD
+* Limiter les modèles de balises
+* Possibilité de sélectionner un blister normal ou un 28+
+* Étendre la période d'essai à 30 jours
+* Améliorer la sauvegarde de la base de données
+* Inclure les médicaments en pharmacie
+* Intégration du logiciel DATEXA
+* Intégration du logiciel PharmaGest
+* Suppression de l'interdiction d'entrer 7 chiffres dans les médicaments créés manuellement
+
 |*|version 1.0.12.2538
+
 * Y compris les consentements des patients et des médecins pour la France
 
 |*|version 1.0.12.1724
+
 * Nouvelle possibilité de sélectionner patients par son nom 
 * Nouveaux champs pour introduire Numerto de carte sanitaire  du patient 
 * Nouvelle possibilité d'imprimer modèles de documents Word 
@@ -16,4 +50,5 @@ cette mise à jour contient améliorations et résout plusieurs problèmes comme ind
 * Nouvelle possibilité de dessiner CARACTERISTIQUES DES coprimidos et les capsules 
 
 |*|version 1.0.11.1414
+
 * nouvelle possibilité d'introduire dans retours le code de médicament rentrés

@@ -4,11 +4,46 @@
 
 Esta atualização contém melhorias e corrige diversos problemas como indicado
 
-|*| Versão 2.1.3.2538
+|*|Version 3.2403.2.3027
+
+* Número de blisters entregues na nota de entrega
+* Mostrar a alteração efectuada no histórico de tratamento
+* Incluir a temperatura e a humidade no carregamento manual
+* Validar as embalagens blister por categoria com doentes seleccionados
+* Entrega por categoria de embalagens blister seleccionadas
+* Retomar o inventário dos medicamentos não registados em troca
+* Incluir no rótulo a data de fim do tratamento não emblistável
+* Rastreabilidade e consultas sobre o lote de blister utilizado
+* Recuperar o inventário de medicamentos de uma embalagem blister descartada
+* Descarregar documentos para a pasta correspondente em vez da raiz
+
+|*|Version 3.2403.0.2968
+
+* Nova integração com a Glintt
+* Etiqueta MD-m.005
+
+|*|Version 3.2401.0.2851
+
+* Novo relatório imprimível de uma ou duas folhas
+* Novo relatório de produção e entrega de embalagens blister
+
+|*|Version 3.2310.3.2770
+
+* Mudança nos requisitos do sistema (veja no manual)
+* Correções de bugs FMD
+* Modelos de tags de limite
+* Opção para selecionar bolha normal ou 28+
+* Estender o período de teste para 30 dias
+* Melhore o backup do banco de dados
+* Opção para abrir o teamViewer diretamente do FMD
+* Etiqueta de tampas imprimíveis 
+* Removida a proibição de inserir 7 dígitos em medicamentos criados manualmente
+
+|*|Versão 2.1.3.2538
 
 * Antes de uma nova lei em Portugal, foi incluído o texto legal correspondente ao imprimir um telefone nos dois rótulos dos blisters da máquina
 
-|*| Versão 2.1.3.2516
+|*|Versão 2.1.3.2516
 
 * Novas etiquetas com lote e validade
 * Opção para incluir o número de série do medicamento
@@ -17,7 +52,7 @@ Esta atualização contém melhorias e corrige diversos problemas como indicado
 * Prevenir a introdução de medicamentos com número de série duplicado
 * Sistema de backup aprimorado (últimos 5 dias + diretório opcional)
 
-|*| Versão 2.1.3.2463
+|*|Versão 2.1.3.2463
 
 * Repita as tentativas de leitura de temperatura e umidade ao lançar cargas
 * Nova versão do firmware da máquina 

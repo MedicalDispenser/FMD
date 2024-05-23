@@ -3,8 +3,37 @@
 ************************************************** *************************************
 Questo aggiornamento contiene miglioramenti e risolve diversi problemi come i seguenti:
 
-|*|versione 1.0.12.1724
+|*|Version 3.2403.2.3027
 
+* Numero di blister consegnati sulla bolla di consegna
+* Mostra le modifiche apportate alla storia del trattamento
+* Includere temperatura e umidità nel caricamento manuale
+* Validazione dei blister per categoria con pazienti selezionati
+* Categoria consegna blister selezionati
+* Ritirare l'inventario dei farmaci non registrati in restituzione
+* Includere sull'etichetta la data di fine del trattamento non emblistabile
+* Tracciabilità e interrogazioni sul lotto di blister utilizzato
+* Recuperare l'inventario dei farmaci da un blister dismesso
+* Scaricare i documenti nella cartella corrispondente invece che nella radice
+
+|*|Version 3.2401.0.2851
+
+* Nuovo report stampabile a foglio singolo o doppio
+* Nuovo rapporto di produzione e consegna dei blister
+
+|*|Version 3.2310.3.2770
+
+* Documenti di programma aggiornati
+* Modifica dei requisiti di sistema (vedere nel manuale)
+* Correzioni di bug FMD
+* Limita i modelli di tag
+* Opzione per selezionare blister normale o 28+
+* Prolungare il periodo di prova a 30 giorni
+* Migliora il backup del database
+* Includi farmaci parafarmacici
+* Rimosso il divieto di inserire 7 cifre nei medicinali creati manualmente
+
+|*|versione 1.0.12.1724
 
 * Nuova possibilità di selezionare i pazienti per il suo nome
 * Nuovi campi per l'inserimento di Numerto tessera sanitaria del paziente
@@ -14,4 +43,5 @@ Questo aggiornamento contiene miglioramenti e risolve diversi problemi come i se
 * Nuova possibilità di disegnare la forma delle capsule e delle compresse
  
 |*|versione 1.0.11.1414
+
 * Nuova possibilità di inserire nei resi il codice del farmaco restituito

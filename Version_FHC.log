@@ -5,6 +5,63 @@
 Esta actualización contiene mejoras y soluciona varios problemas como se indica a
 continuacion:
 
+|*|Version 3.2403.2.3027
+
+* Corrección de errores
+
+|*|Version 3.2403.0.2968
+
+* Número de blisters entregados en albarán de entrega
+* Mostrar cambio realizado en histórico de tratamiento
+* Incluir temperatura y humedad en carga manual
+* TISS en informe de necesidades
+* Validar blisters por categoría con pacientes seleccionados
+* Categoría entrega blisters seleccionados
+* PNT Medical Dispenser
+* Recuperar a inventario los medicamentos no emblistables en retorno
+* Incluir fecha fin del tratamiento no emblistable en la etiqueta
+* Trazabilidad y consultas del lote de blister utilizado
+* Personalización COF Cantabria en etiquetas
+* Recuperar inventario de medicamentos de un blister eliminado
+* Descargar documentos en carpeta correspondiente en lugar de raiz
+* Actualizar consentimiento COFG (Apéndice 1)
+* Incluir codigo barras Ilunion a categoria de pacientes
+
+|*|Version 3.2403.0.2901
+
+* Nuevos certificados de homologación de productos Medical Dispenser
+
+|*|Version 3.2401.0.2851
+
+* Nuevo Informe imprimible en una o dos hojas
+* Nuevo Informe de elaboración y entrega de blister
+* Nuevos servicios online avanzados
+ * Nuevo servicio online Avisos Pacientes y Cuidadores
+ * Nuevo servicio online Gestión Pacientes y Tratamientos
+* Etiquetas con logos personalizados para COF ZAMORA 
+* Integración con Resiplus Online
+
+|*|Version 3.2310.3.2770
+
+* Cambio en los requisitos del sistema (ver en manual)
+* Corrección de errores de FMD
+* Limitar modelos de etiquetas
+* Opción de seleccionar Blister normal o Blister avanzado
+* Ampliar periodo de prueba a 30 dias
+* Mejorar la copia de seguridad y compactado de base de datos
+* Actualizar medicamentos Cinfa
+* Nueva integración con software de gestión de residencias Resiplus
+* Nueva integración con softwares Bitfarma y Sigefar
+* Actualización y mejora en el dispositivo Smart Home Care
+* Retirada la prohibición de introducir 7 dígitos en medicamentos creados a mano
+* Modificación de sistema de actualizaciónes; programa y listado de medicamentos
+* Nuevos ficheros de consentimiento
+
+|*|Version 2.1.3.2606
+
+* Corrección de errores
+* Optimización de algunas funcionalidades
+
 |*|Version 2.1.3.2538
 
 * Opción de imprimir el logo en las categorías COFGU

@@ -3,8 +3,44 @@
 *************************************************************************************** 
 This update contains improvements and fixes several problems such as follows :
 
-|*|version 1.0.12.1724
+|*|Version 3.2403.2.3027
 
+* Number of blister packs delivered on delivery note
+* Show change made in treatment history
+* Include temperature and humidity in manual loading
+* Validate blisters by category with selected patients
+* Category delivery selected blisters
+* Recovering inventory of non-blistable drugs in return
+* Traceability and queries of the blister batch used
+* Retrieve drug inventory from a discarded blister pack
+* Download documents to the corresponding folder instead of root
+
+|*|Version 3.2403.0.2968
+
+* New label and report
+* New USA drug list with drug photos
+
+|*|Version 3.2403.0.2901
+
+* New CircuPack logo
+* New USA drug list with NDC codes
+
+|*|Version 3.2401.0.2851
+
+* New single or double-sheet printable report
+* New report of blister preparation and delivery
+
+|*|Version 3.2310.3.2770
+
+* Change in system requirements (see in manual)
+* FMD errors correction
+* Limit tags models
+* Option to select normal blister or 28+
+* Extend trial period
+* Improve backup process
+* Removed the prohibition of entering 7 digits in medicines created manually
+ 
+|*|version 1.0.12.1724
 
 * New possibility to select patients for its name 
 * New fields for entering Numerto health card of the patient 
@@ -14,4 +50,5 @@ This update contains improvements and fixes several problems such as follows :
 * New possibility of draw shape of the capsules and Tablets
  
 |*|version 1.0.11.1414 
+
 * New possibility of introducing in returns the code of medication returned
