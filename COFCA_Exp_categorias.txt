@@ -1,0 +1,1 @@
+0;-5;COF Cantabria;0;Cantabria;;;;05:00-10:59--1|11:00-14:59--2|15:00-20:59--3|21:00-23:59--4|00:00-04:59--4|;CIF Cantabria;1;1;;;COF_Cantabria_logo.bmp;COF Cantabria
