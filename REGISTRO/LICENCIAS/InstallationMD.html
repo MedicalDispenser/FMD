@@ -1,0 +1,113 @@
+<!-- index.html -->
+
+<!doctype html>
+
+
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+
+<html ng-app="RegistrosWeb">
+
+	<head>
+
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+		
+
+
+	</head>
+
+	<!-- Seleccionar controlador y crear contenedor-->
+
+	<body ng-controller="mainController">
+
+		<!-- Titulo y numero de registros -->
+
+		<div style="width: 90%; height: 100%">
+
+			<div class="jumbotron text-center" style="padding: 15px">
+
+				<h2>Installation du Medical Dispenser</h2>
+
+			</div>
+
+				<!-- Formulario para ver/Modificar un registro-->
+
+			<div id="formulario" class="row h-100 justify-content-center align-items-center">
+
+				<div class="col-10 col-md-8 col-lg-6">
+
+					<form id="form">
+					  <div class="form-group">
+					    <label for="seeAnotherField">Quel genre d'inscription voulez-vous faire?</label>
+					    <select class="form-control" id="seeAnotherField">
+					          <option value="maquina">Machine</option>
+					          <option value="software">Software</option>
+					    </select>
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="nombre" placeholder="Nom">
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="nombreFarmacia" placeholder="Nom pharmacie">
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="direccion" placeholder="Addresse">
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="cp" placeholder="CP">
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="telefono" placeholder="Téléphoner">
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="email" placeholder="Email">
+					  </div>
+					  <div class="form-group" id="idNumeroSerieMaquinaDiv">
+					    <input type="text" class="form-control" id="numeroSerieMaquina" placeholder="Numéro de série">
+					  </div>
+					  <div class="form-group" id="idNumeroSerieSoftwareDiv">
+					    <input type="text" class="form-control" id="numeroSerieSoftware" placeholder="Numéro de série">
+					  </div>
+					  <div class="form-group" id="idHardwareDiv">
+					    <input type="text" class="form-control" id="idHardware" placeholder="ID du hardware">
+					  </div>
+					  <div class="form-group">
+					  <input type="checkbox" id="idCheckBox"  ng-model="formData.Checkbox">&nbsp;&nbsp;J`accepte la <a href="http://www.fagorhealthcare.com/es/aviso-legal/" target="_blank">LOPD</a></label>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Envoyer</button>
+					</form>
+
+				</div>			
+
+			</div>	
+
+		</div>
+
+		<div id="myModal" class="modal" tabindex="-1" role="dialog">
+		    <div class="modal-dialog" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h5 class="modal-title" id="modalHeader">ERROR</h5>
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		            </div>
+		            <div class="modal-body" id="modalText" style="white-space: pre-line">
+		                ERROR
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+	<script src="ScriptFr.js"></script>
+	
+
+</html>
+
