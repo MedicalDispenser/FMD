@@ -1,0 +1,93 @@
+<!-- index.html -->
+
+<!doctype html>
+
+
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+
+<html ng-app="RegistrosWeb">
+
+	<head>
+
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+		
+
+
+	</head>
+
+	<!-- Seleccionar controlador y crear contenedor-->
+
+	<body ng-controller="mainController">
+
+		<!-- Titulo y numero de registros -->
+
+		<div style="width: 90%; height: 100%">
+
+			<div class="jumbotron text-center" style="padding: 15px">
+
+				<h2>Medical Dispenser Online</h2>
+
+			</div>
+
+				<!-- Formulario para ver/Modificar un registro-->
+
+			<div id="formulario" class="row h-100 justify-content-center align-items-center">
+
+				<div class="col-10 col-md-8 col-lg-6">
+
+					<form id="form">
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="nifFarmacia" placeholder="Farmacia NIF/CIF *">
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="nombreFarmacia" placeholder="Nome della farmacia *">
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="email" placeholder="Email *">
+					  </div>
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="telefono" placeholder="Telefono">
+					  </div>
+					  <div class="form-group">
+					  <input type="checkbox" id="idCheckBox"  ng-model="formData.Checkbox">&nbsp;&nbsp;Accetto il <a href="http://www.fagorhealthcare.com/es/aviso-legal/" target="_blank">Condizioni di utilizzo</a></label>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Inviare</button>
+					</form>
+
+				</div>			
+
+			</div>
+			
+
+		</div>
+
+		<div id="myModal" class="modal" tabindex="-1" role="dialog">
+		    <div class="modal-dialog" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h5 class="modal-title" id="modalHeader">ERROR</h5>
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		            </div>
+		            <div class="modal-body" id="modalText" style="white-space: pre-line">
+		                ERROR
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+	
+	<script src="ScriptCodigo_IT.js"></script>
+	
+
+</html>
+
