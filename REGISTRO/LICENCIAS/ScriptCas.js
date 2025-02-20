@@ -263,7 +263,7 @@ $( "#form" ).submit(function( event ) {
 
   			credentials: 'include',
 
-		    url: "https://fmd3.eu-gb.mybluemix.net/v0/registroOnline",
+		    url: "https://nrapi.fmd.fagorhealthcare.com/v0/registroOnline",
 		    success: function (data, status, jqXHR) {
             console.log(jqXHR.status);
             codigo = 200;

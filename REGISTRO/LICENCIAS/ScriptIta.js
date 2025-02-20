@@ -246,7 +246,7 @@ $( "#form" ).submit(function( event ) {
 				    "Telefono": t,
 
 				    "Email": e,
-				    
+
 				    "NIFFarmacia": nif,
 
 				    "EmailFarmacia": eFarma,
@@ -263,31 +263,7 @@ $( "#form" ).submit(function( event ) {
 
 			}
 
-			/*
-
-			var requestOptions = {
-
-			  method: 'POST',
-
-			  headers: myHeaders,
-
-			  body: raw,
-
-			  redirect: 'follow',
-
-			  mode: 'no-cors'
-
-			};
-
-			fetch("https://fmd3.eu-gb.mybluemix.net/v0/registroOnline", requestOptions)
-
-			  .then(response => response.text())
-
-			  .then(result => console.log(result))
-
-			  .catch(error => console.log('error', error)); 
-
-*/
+		
 var codigo;
 		$.ajax({
 
@@ -303,7 +279,7 @@ var codigo;
 
   			credentials: 'include',
 
-		    url: "https://fmd3.eu-gb.mybluemix.net/v0/registroOnline",
+		    url: "https://nrapi.fmd.fagorhealthcare.com/v0/registroOnline",
 		    success: function (data, status, jqXHR) {
             console.log(jqXHR.status);
             codigo = 200;
