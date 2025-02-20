@@ -42,6 +42,10 @@ $( "#form" ).submit(function( event ) {
 
 		var e = $('#email').val();
 
+		var nif = $('#nif').val();
+
+		var eFarma = $('#emailFarmacia').val();
+
 		var nsm = $('#numeroSerieMaquina').val();
 
 		var nss = $('#numeroSerieSoftware').val();
@@ -79,6 +83,22 @@ $( "#form" ).submit(function( event ) {
 		if (d == "") {
 
 			msg_error = msg_error + '\nInserire l`indirizzo';
+
+			error = true;
+
+		}
+
+		if (nif == "") {
+
+			msg_error = msg_error + '\nInserire il NIF';
+
+			error = true;
+
+		}
+
+		if (eFarma == "") {
+
+			msg_error = msg_error + '\ninserire l`indirizzo e-mail della farmacia';
 
 			error = true;
 
@@ -193,6 +213,10 @@ $( "#form" ).submit(function( event ) {
 
 				    "Email": e,
 
+				    "NIFFarmacia": nif,
+
+				    "EmailFarmacia": eFarma,
+
 				    "tipo": "maquina",
 
 				    "NumeroSerie": nsm
@@ -222,6 +246,10 @@ $( "#form" ).submit(function( event ) {
 				    "Telefono": t,
 
 				    "Email": e,
+				    
+				    "NIFFarmacia": nif,
+
+				    "EmailFarmacia": eFarma,
 
 				    "tipo": "software",
 

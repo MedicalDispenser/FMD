@@ -42,6 +42,10 @@ $( "#form" ).submit(function( event ) {
 
 		var e = $('#email').val();
 
+		var dist = $('#distribuidor').val();
+
+		var nif = $('#nif').val();
+
 		var nsm = $('#numeroSerieMaquina').val();
 
 		var nss = $('#numeroSerieSoftware').val();
@@ -79,6 +83,22 @@ $( "#form" ).submit(function( event ) {
 		if (d == "") {
 
 			msg_error = msg_error + '\nDigite seu endereço';
+
+			error = true;
+
+		}
+
+		if (dist == "") {
+
+			msg_error = msg_error + '\nDigite seu código do distribuidor';
+
+			error = true;
+
+		}
+
+		if (nif == "") {
+
+			msg_error = msg_error + '\nDigite seu NIF';
 
 			error = true;
 
@@ -193,6 +213,10 @@ $( "#form" ).submit(function( event ) {
 
 				    "Email": e,
 
+				    "NIFFarmacia": nif,
+
+				    "CodigoInstalador": dist,
+
 				    "tipo": "maquina",
 
 				    "NumeroSerie": nsm
@@ -223,6 +247,10 @@ $( "#form" ).submit(function( event ) {
 
 				    "Email": e,
 
+				    "NIFFarmacia": nif,
+
+				    "CodigoInstalador": dist,
+
 				    "tipo": "software",
 
 				    "NumeroSerie": nss,
@@ -235,31 +263,6 @@ $( "#form" ).submit(function( event ) {
 
 			}
 
-			/*
-
-			var requestOptions = {
-
-			  method: 'POST',
-
-			  headers: myHeaders,
-
-			  body: raw,
-
-			  redirect: 'follow',
-
-			  mode: 'no-cors'
-
-			};
-
-			fetch("https://fmd3.eu-gb.mybluemix.net/v0/registroOnline", requestOptions)
-
-			  .then(response => response.text())
-
-			  .then(result => console.log(result))
-
-			  .catch(error => console.log('error', error)); 
-
-*/
 var codigo;
 		$.ajax({
 
