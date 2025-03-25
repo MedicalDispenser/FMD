@@ -1,0 +1,5 @@
+Cet outil d'interaction médicamenteuse basé sur l'intelligence artificielle est destiné à des fins d'information uniquement et à soutenir le travail du pharmacien. Les données et analyses fournies ne remplacent en aucun cas le jugement professionnel et l'évaluation clinique du pharmacien ou du professionnel de la santé.
+
+Bien que nous nous efforcions de fournir des informations exactes et à jour, nous ne garantissons pas l'exhaustivité, l'exactitude ou l'applicabilité des données dans tous les cas cliniques. La responsabilité finale de l'évaluation, de la recommandation et de la délivrance des médicaments incombe exclusivement au pharmacien ou au professionnel de la santé concerné.
+
+L'utilisation de cet outil implique l'acceptation de ces conditions. Le développeur et les fournisseurs de cet outil n'assument aucune responsabilité en cas d'erreurs, d'omissions ou de décisions prises sur la base des informations fournies.

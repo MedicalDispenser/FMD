@@ -1,0 +1,5 @@
+This artificial intelligence-based drug interaction tool is intended solely for informational purposes and to support the work of the pharmacist. The data and analyses provided are in no way a substitute for the professional judgment or clinical assessment of the pharmacist or healthcare professional.
+
+While we strive to provide accurate and up-to-date information, we do not guarantee the completeness, accuracy or applicability of the data in all clinical cases. Final responsibility for the evaluation, recommendation and dispensing of medications rests solely with the pharmacist or healthcare professional concerned.
+
+Use of this tool implies acceptance of these terms. The developer and providers of this tool assume no responsibility for errors, omissions or decisions made on the basis of the information provided.

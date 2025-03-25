@@ -1,0 +1,5 @@
+La presente herramienta de interacción de medicamentos basada en inteligencia artificial tiene un propósito exclusivamente informativo y de apoyo a la labor del farmacéutico. Los datos y análisis proporcionados no sustituyen en ningún caso el criterio profesional ni la evaluación clínica del farmacéutico o del profesional de la salud.
+
+Si bien nos esforzamos por ofrecer información precisa y actualizada, no garantizamos la integridad, exactitud o aplicabilidad de los datos en todos los casos clínicos. La responsabilidad final sobre la evaluación, recomendación y dispensación de medicamentos recae exclusivamente en el farmacéutico o profesional sanitario correspondiente.
+
+El uso de esta herramienta implica la aceptación de estos términos. El desarrollador y los proveedores de esta herramienta no asumen ninguna responsabilidad por errores, omisiones o decisiones tomadas en base a la información proporcionada.
