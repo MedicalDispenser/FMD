@@ -87,7 +87,9 @@ $( "#form" ).submit(function( event ) {
 
 				  "name": f,
 
-				  "email": e
+				  "email": e,
+
+				  "origin": "fagor_en"
 				};
 		var codigo;
 		$.ajax({
