@@ -1,0 +1,5 @@
+Questo strumento di interazione con i farmaci basato sull'intelligenza artificiale ha uno scopo puramente informativo e di supporto al lavoro del farmacista. I dati e le analisi fornite non sostituiscono in alcun modo il giudizio professionale e la valutazione clinica del farmacista o dell'operatore sanitario.
+
+Pur impegnandoci a fornire informazioni accurate e aggiornate, non garantiamo la completezza, l'accuratezza o l'applicabilità dei dati in tutti i casi clinici. La responsabilità finale della valutazione, della raccomandazione e della dispensazione dei farmaci spetta esclusivamente al farmacista o all'operatore sanitario interessato.
+
+L'uso di questo strumento implica l'accettazione di queste condizioni. Lo sviluppatore e i fornitori di questo strumento non si assumono alcuna responsabilità per eventuali errori, omissioni o decisioni prese sulla base delle informazioni fornite.
