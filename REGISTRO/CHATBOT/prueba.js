@@ -19,4 +19,4 @@ window.onload = function () {
 
     observer.observe(document.body, { childList: true, subtree: true });
 };
-console.log(document.documentElement.lang);
+console.log(document.getElementsByTagName("html")[0].getAttribute("lang"));
