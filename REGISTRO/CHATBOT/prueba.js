@@ -19,4 +19,9 @@ window.onload = function () {
 
     observer.observe(document.body, { childList: true, subtree: true });
 };
-console.log(navigator.language);
+console.log(fetch(window.location.href)
+.then(response => response.text())
+.then(html => {
+  let doc = new DOMParser().parseFromString(html, "text/html");
+  console.log(doc.documentElement.lang); // Esto debería mostrar el idioma original
+}));
