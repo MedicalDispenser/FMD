@@ -118,13 +118,17 @@ function enviarDatosAPI(modal) {
 }
 
 function abrirModal() {
+  document.getElementById("chatbase-bubble-window").style.visibility = "hidden";
   document.body.style.pointerEvents = "none"; // Bloquea interacciones con el fondo
   document.getElementById("miModal").style.pointerEvents = "auto"; // Permite solo en el iframe
+
 }
 function cerrarModal(modal) {
 document.body.style.pointerEvents = "auto"; // Reactiva la interacción con el fondo
 document.body.removeChild(modal);
+document.getElementById("chatbase-bubble-window").style.visibility = "visible";
 }
+
 
 
 // const observer = new MutationObserver((mutations, obs) => {
