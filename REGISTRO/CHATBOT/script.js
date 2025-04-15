@@ -51,13 +51,7 @@ function mostrarFormulario() {
   abrirModal();
   // Evento para enviar datos
   document.getElementById("enviarDatos").addEventListener("click", () => {
-    cerrarModal();
     enviarDatosAPI(modal); // Pasamos el modal para cerrarlo solo si los datos son correctos
-  });
-
-  // Evento para cerrar el modal manualmente
-  document.getElementById("cerrarModal").addEventListener("click", () => {
-    document.body.removeChild(modal); // Cierra el modal sin enviar
   });
 }
 
@@ -65,7 +59,7 @@ function mostrarFormulario() {
  * Envía los datos ingresados en el formulario a una API REST (POST request).
  * Solo cierra el formulario si los datos están completos.
  */
-function enviarDatosAPI() {
+function enviarDatosAPI(modal) {
 
   let nombre = document.getElementById("nombre").value.trim();
   let email = document.getElementById("email").value.trim();
@@ -78,55 +72,58 @@ function enviarDatosAPI() {
   }
 
   let datosUsuario = { nombre, email, mensaje };
+  console.log("Enviando peticion...");
+  cerrarModal(modal);
+  
+  // // 🔹 PRIMERA API (POST) - Obtener datos adicionales
+  // fetch("https://tu-api.com/api1", {
+  //   // Reemplaza con tu API real
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify(datosUsuario),
+  // })
+  //   .then((response) => {
+  //     if (!response.ok) throw new Error("Error en la API 1");
+  //     return response.json();
+  //   })
+  //   .then((dataAPI1) => {
+  //     console.log("Respuesta de la API 1:", dataAPI1);
 
-  // 🔹 PRIMERA API (POST) - Obtener datos adicionales
-  fetch("https://tu-api.com/api1", {
-    // Reemplaza con tu API real
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(datosUsuario),
-  })
-    .then((response) => {
-      if (!response.ok) throw new Error("Error en la API 1");
-      return response.json();
-    })
-    .then((dataAPI1) => {
-      console.log("Respuesta de la API 1:", dataAPI1);
+  //     // 🔹 SEGUNDA API (POST) - Enviar los datos finales
+  //     let datosFinales = {
+  //       ...datosUsuario, // Mantiene los datos del usuario
+  //       datosAdicionales: dataAPI1, // Añade los datos obtenidos de la API 1
+  //     };
 
-      // 🔹 SEGUNDA API (POST) - Enviar los datos finales
-      let datosFinales = {
-        ...datosUsuario, // Mantiene los datos del usuario
-        datosAdicionales: dataAPI1, // Añade los datos obtenidos de la API 1
-      };
-
-      return fetch("https://tu-api.com/api2", {
-        // Reemplaza con la API final
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datosFinales),
-      });
-    })
-    .then((response) => {
-      if (!response.ok) throw new Error("Error en la API 2");
-      return response.json();
-    })
-    .then((dataAPI2) => {
-      console.log("Datos enviados correctamente:", dataAPI2);
-      alert("Datos registrados correctamente.");
-      cerrarModal(); // ✅ Cierra el formulario solo si ambas APIs funcionan
-    })
-    .catch((error) => {
-      console.error("Error en el proceso:", error);
-      alert("Hubo un problema al enviar los datos.");
-    });
+  //     return fetch("https://tu-api.com/api2", {
+  //       // Reemplaza con la API final
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(datosFinales),
+  //     });
+  //   })
+  //   .then((response) => {
+  //     if (!response.ok) throw new Error("Error en la API 2");
+  //     return response.json();
+  //   })
+  //   .then((dataAPI2) => {
+  //     console.log("Datos enviados correctamente:", dataAPI2);
+  //     alert("Datos registrados correctamente.");
+  //     cerrarModal(); // ✅ Cierra el formulario solo si ambas APIs funcionan
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error en el proceso:", error);
+  //     alert("Hubo un problema al enviar los datos.");
+  //   });
 }
 
 function abrirModal() {
   document.body.style.pointerEvents = "none"; // Bloquea interacciones con el fondo
-  document.getElementById("chatbot-iframe").style.pointerEvents = "auto"; // Permite solo en el iframe
+  document.getElementById("miModal").style.pointerEvents = "auto"; // Permite solo en el iframe
 }
-function cerrarModal() {
+function cerrarModal(modal) {
 document.body.style.pointerEvents = "auto"; // Reactiva la interacción con el fondo
+document.body.removeChild(modal);
 }
 
 
