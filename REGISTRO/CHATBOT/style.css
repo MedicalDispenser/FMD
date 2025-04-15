@@ -1,0 +1,21 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Color semi-transparente */
+    z-index: 999; /* Asegura que esté por encima de todo */
+    display: none; /* Oculto por defecto */
+}
+
+#formulario {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000; /* Más alto que el overlay */
+}
