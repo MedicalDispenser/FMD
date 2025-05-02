@@ -43,7 +43,7 @@ function mostrarFormulario() {
             <h3>Ingresa los datos</h3>
             <label>Nombre: <input type="text" id="nombre"></label><br><br>
             <label>Email: <input type="email" id="email"></label><br><br>
-            <label>Teléfono: <label id="telefono"></label></label><br><br>
+            <label>Teléfono: <input type="number" id="telefono"></label><br><br>
             <button id="enviarDatos">Enviar</button>
         </div>
     `;
