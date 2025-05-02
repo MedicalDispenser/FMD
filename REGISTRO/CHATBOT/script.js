@@ -43,7 +43,7 @@ function mostrarFormulario() {
             <h3>Ingresa los datos</h3>
             <label>Nombre: <input type="text" id="nombre"></label><br><br>
             <label>Email: <input type="email" id="email"></label><br><br>
-            <label>Mensaje: <textarea id="mensaje"></textarea></label><br><br>
+            <label>Teléfono: <label id="telefono"></label></label><br><br>
             <button id="enviarDatos">Enviar</button>
         </div>
     `;
@@ -53,6 +53,7 @@ function mostrarFormulario() {
   document.getElementById("enviarDatos").addEventListener("click", () => {
     enviarDatosAPI(modal); // Pasamos el modal para cerrarlo solo si los datos son correctos
   });
+  
 }
 
 /**
@@ -63,18 +64,40 @@ function enviarDatosAPI(modal) {
 
   let nombre = document.getElementById("nombre").value.trim();
   let email = document.getElementById("email").value.trim();
-  let mensaje = document.getElementById("mensaje").value.trim();
+  let telefono = document.getElementById("telefono").value.trim();
 
   // Si hay campos vacíos, mostramos alerta y no enviamos nada
-  if (!nombre || !email || !mensaje) {
+  if (!nombre || !email || !telefono) {
     alert("Por favor, completa todos los campos antes de enviar.");
     return;
   }
 
-  let datosUsuario = { nombre, email, mensaje };
+  let datosUsuario = { nombre, email, telefono };
   console.log("Enviando peticion...");
   cerrarModal(modal);
   
+  var Airtable = require('airtable');
+  var base = new Airtable({apiKey: 'patvKEdw7E4ty1Gk7.a6b86420edbcba30386d13095ccf422b3d28d5f922f9583166a002f5f7381280'}).base('appj8F5N6wMoj5zrZ');
+  
+  base('Tickets').create([
+    {
+      "fields": {
+        "Nombre farmacia": nombre,
+        "Teléfono farmacia": telefono,
+        "Correo farmacia": email
+      }
+    },
+  ], function(err, records) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    records.forEach(function (record) {
+      var recordID=record.getId();
+      console.log(record.getId());
+    });
+  });
+
   // // 🔹 PRIMERA API (POST) - Obtener datos adicionales
   // fetch("https://tu-api.com/api1", {
   //   // Reemplaza con tu API real
