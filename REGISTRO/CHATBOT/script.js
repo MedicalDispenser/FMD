@@ -299,6 +299,7 @@ function enviarDatosAPI(modal) {
   console.log(nombre + " " + email + " " + telefono);
   // console.log("Enviando peticion...");
   cerrarModal(modal);
+  window.chatbase.close();// cerrar para actualizar los datos
   switch (lang) {
     case "es-ES":
       window.chatbase.setInitialMessages([
@@ -336,6 +337,7 @@ function enviarDatosAPI(modal) {
         "How can I help you today?",
       ]);
   }
+  window.chatbase.open();
 }
 
 function abrirModal() {
