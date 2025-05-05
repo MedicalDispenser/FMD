@@ -1,3 +1,77 @@
+
+const traducciones = {
+  "es-ES": {
+    title_User_Info: "Ingresa los datos de la farmacia",
+    lblNombre_User_info: "Nombre de la farmacia",
+    lblEmail_User_info: "Correo electronico",
+    lblTelefono_User_info: "Telefono de la farmacia",
+    btnGuadar_User_info: "Guardar",
+
+    title_Inci_Resuelta: "¿Se ha solucionado tu duda?",
+    lblyes: "✅ Sí",
+    lblno: "❌ No",
+    btnconfirm: "Confirmar",
+    lblvalidation: "Por favor selecciona una opción",
+    lblsending: "Enviando...",
+  },
+  "pt-PT": {
+    title_User_Info: "Introduzir os dados da farmácia",
+    lblNombre_User_info: "Nome da farmácia",
+    lblEmail_User_info: "Endereço eletrónico",
+    lblTelefono_User_info: "Número de telefone da farmácia",
+    btnGuadar_User_info: "Guardar",
+
+    title_Inci_Resuelta: "Sua dúvida foi resolvida?",
+    lblyes: "✅ Sim",
+    lblno: "❌ Não",
+    btnconfirm: "Confirmar",
+    lblvalidation: "Por favor selecione uma opção",
+    lblsending: "Enviando...",
+  },
+  "en-US": {
+    title_User_Info: "Enter the pharmacy data",
+    lblNombre_User_info: "Pharmacy name",
+    lblEmail_User_info: "Email address",
+    lblTelefono_User_info: "Pharmacy phone number",
+    btnGuadar_User_info: "Save",
+
+    title_Inci_Resuelta: "Was your question resolved?",
+    lblyes: "✅ Yes",
+    lblno: "❌ No",
+    btnconfirm: "Confirm",
+    lblvalidation: "Please select an option",
+    lblsending: "Sending...",
+  },
+  "it-IT": {
+    title_User_Info: "Inserire i dati della farmacia",
+    lblNombre_User_info: "Nome della farmacia",
+    lblEmail_User_info: "Indirizzo e-mail",
+    lblTelefono_User_info: "Numero di telefono della farmacia",
+    btnGuadar_User_info: "Salva",
+
+    title_Inci_Resuelta: "La tua domanda ha ricevuto una risposta?",
+    lblyes: "✅ Sì",
+    lblno: "❌ No",
+    btnconfirm: "Confermare",
+    lblvalidation: "Selezionare un'opzione",
+    lblsending: "Invio...",
+  },
+  "fr-FR": {
+    title_User_Info: "Saisir les coordonnées de la pharmacie",
+    lblNombre_User_info: "Nom de la pharmacie",
+    lblEmail_User_info: "Adresse électronique",
+    lblTelefono_User_info: "Numéro de téléphone de la pharmacie",
+    btnGuadar_User_info: "Sauvegarde",
+
+    title_Inci_Resuelta: "Avez-vous reçu une réponse à votre question ?",
+    lblyes: "✅ Oui",
+    lblno: "❌ Non",
+    btnconfirm: "Confirmer",
+    lblvalidation: "Veuillez sélectionner une option",
+    lblsending: "Envoi...",
+  },
+};
+
 var estadoAnterior = null; // Guardará el estado previo
 var nombre = "";
 var email = "";
@@ -47,29 +121,31 @@ const observer2 = new MutationObserver((mutations, obs) => {
 observer2.observe(document.body, { childList: true, subtree: true });
 
 function mostrarFormulario() {
+  const t = traducciones[lang] || traducciones[0]; // Fallback a español
+
   // Crear el modal con HTML dinámico
   let modal = document.createElement("div");
   modal.innerHTML = `
-       <div id="miModal" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+       <div id="formInfoUser" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
                     background: white; padding: 25px; box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
                     border-radius: 12px; z-index: 1000; width: 350px; font-family: 'Arial', sans-serif;">
-    <h3 style="color: #1E73BE; margin-top: 0; border-bottom: 2px solid #1E73BE; padding-bottom: 10px;">Ingresa los datos de la farmacia</h3>
+    <h3 style="color: #1E73BE; margin-top: 0; border-bottom: 2px solid #1E73BE; padding-bottom: 10px;">${t.title_User_Info}</h3>
     
     <div style="margin: 15px 0;">
         <label style="display: block; margin-bottom: 15px; color: #555;">
-            Nombre: 
+            ${t.lblNombre_User_info}: 
             <input type="text" id="nombre" style="width: 100%; padding: 8px; margin-top: 5px; 
                     border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
         </label>
         
         <label style="display: block; margin-bottom: 15px; color: #555;">
-            Email: 
+            ${t.lblEmail_User_info}: 
             <input type="email" id="email" style="width: 100%; padding: 8px; margin-top: 5px; 
                     border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
         </label>
         
         <label style="display: block; margin-bottom: 20px; color: #555;">
-            Teléfono: 
+            ${t.lblTelefono_User_info}: 
             <input type="text" id="telefono" style="width: 100%; padding: 8px; margin-top: 5px; 
                     border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
         </label>
@@ -80,7 +156,7 @@ function mostrarFormulario() {
                     font-size: 16px; width: 100%; transition: background-color 0.3s;"
             onmouseover="this.style.backgroundColor='#165a9d'" 
             onmouseout="this.style.backgroundColor='#1E73BE'">
-        Enviar
+            ${t.btnGuadar_User_info}
     </button>
 </div>
     `;
@@ -93,24 +169,29 @@ function mostrarFormulario() {
 }
 
 function cerrarChat() {
+  if (historial.length == 0) {
+    console.log("Sin conversacion");
+    return;
+  }
+  const t = traducciones[lang] || traducciones[0]; // Fallback a español
   let modal = document.createElement("div");
   modal.innerHTML = `
-<div id="miModalTrueFalse" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+<div id="incidenciaResueltaForm" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
                     background: white; padding: 25px; box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
                     border-radius: 12px; z-index: 1000; width: 350px; font-family: 'Arial', sans-serif;
                     transition: opacity 0.3s ease;">
-    <h3 style="color: #1E73BE; margin-top: 0; border-bottom: 2px solid #1E73BE; padding-bottom: 10px;">¿Se ha solucionado tu duda?</h3>
+    <h3 style="color: #1E73BE; margin-top: 0; border-bottom: 2px solid #1E73BE; padding-bottom: 10px;"> ${t.title_Inci_Resuelta}</h3>
     
     <div style="margin: 20px 0; text-align: center;">
         <div style="display: flex; justify-content: space-around; margin-bottom: 25px;">
             <label style="display: flex; align-items: center; cursor: pointer;">
                 <input type="radio" name="solucionado" value="true" style="margin-right: 8px; accent-color: #1E73BE;">
-                <span style="font-size: 16px;">✅ Sí</span>
+                <span style="font-size: 16px;">${t.lblyes}</span>
             </label>
             
             <label style="display: flex; align-items: center; cursor: pointer;">
                 <input type="radio" name="solucionado" value="false" style="margin-right: 8px; accent-color: #1E73BE;">
-                <span style="font-size: 16px;">❌ No</span>
+                <span style="font-size: 16px;">${t.lblno}</span>
             </label>
         </div>
     </div>
@@ -120,13 +201,13 @@ function cerrarChat() {
                     font-size: 16px; width: 100%; transition: background-color 0.3s;"
             onmouseover="this.style.backgroundColor='#165a9d'" 
             onmouseout="this.style.backgroundColor='#1E73BE'">
-        Confirmar
+            ${t.btnconfirm}
     </button>
 </div>
 
 <script>
 document.getElementById('confirmarRespuesta').addEventListener('click', function() {
-    const modal = document.getElementById('miModalTrueFalse');
+    const modal = document.getElementById('incidenciaResueltaForm');
     modal.style.opacity = '0';
     
     // Espera a que termine la transición para remover completamente el modal
@@ -156,7 +237,7 @@ document.getElementById('confirmarRespuesta').addEventListener('click', function
 
       // Mostrar estado de carga
       boton.disabled = true;
-      boton.textContent = "Enviando...";
+      boton.textContent = t.lblsending;
       boton.style.backgroundColor = "#165a9d";
 
       // Llamada API
@@ -181,7 +262,7 @@ document.getElementById('confirmarRespuesta').addEventListener('click', function
         .then((data) => {
           console.log("Respuesta Node-RED:", data);
           // Cierre animado después de éxito
-          const modal = document.getElementById("miModalTrueFalse");
+          const modal = document.getElementById("incidenciaResueltaForm");
           modal.style.opacity = "0";
           setTimeout(() => {
             modal.remove(); // Eliminar completamente el modal del DOM
@@ -255,13 +336,12 @@ function enviarDatosAPI(modal) {
         "How can I help you today?",
       ]);
   }
-
 }
 
 function abrirModal() {
   document.getElementById("chatbase-bubble-window").style.visibility = "hidden";
   document.body.style.pointerEvents = "none"; // Bloquea interacciones con el fondo
-  document.getElementById("miModal").style.pointerEvents = "auto"; // Permite solo en el iframe
+  document.getElementById("formInfoUser").style.pointerEvents = "auto"; // Permite solo en el iframe
 }
 function cerrarModal(modal) {
   document.body.style.pointerEvents = "auto"; // Reactiva la interacción con el fondo
@@ -283,3 +363,4 @@ function cerrarModal(modal) {
 //     }
 // });
 // observer.observe(document.body, { childList: true, subtree: true });
+
