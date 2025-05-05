@@ -1,4 +1,3 @@
-
 const traducciones = {
   "es-ES": {
     title_User_Info: "Ingresa los datos de la farmacia",
@@ -299,7 +298,7 @@ function enviarDatosAPI(modal) {
   console.log(nombre + " " + email + " " + telefono);
   // console.log("Enviando peticion...");
   cerrarModal(modal);
-  window.chatbase.close();// cerrar para actualizar los datos
+
   switch (lang) {
     case "es-ES":
       window.chatbase.setInitialMessages([
@@ -337,8 +336,10 @@ function enviarDatosAPI(modal) {
         "How can I help you today?",
       ]);
   }
+  window.chatbase.close();// cerrar para actualizar los datos
   window.chatbase.open();
 }
+
 
 function abrirModal() {
   document.getElementById("chatbase-bubble-window").style.visibility = "hidden";
