@@ -160,7 +160,8 @@ function mostrarFormulario() {
 </div>
     `;
   document.body.appendChild(modal);
-  abrirModal();
+  //abrirModal();
+  window.chatbase.close();
   // Evento para enviar datos
   document.getElementById("enviarDatos").addEventListener("click", () => {
     enviarDatosAPI(modal); // Pasamos el modal para cerrarlo solo si los datos son correctos
@@ -295,6 +296,14 @@ function enviarDatosAPI(modal) {
     alert("Por favor, completa todos los campos antes de enviar.");
     return;
   }
+  if (!validarCorreoElectronico(email)){
+    alert("Por favor, introduce un correo electronico válido.");
+    return;
+  }
+  if (!validarNumeroTelefonico(telefono)){
+    alert("Por favor, introduce un numero de telefono válido.");
+    return;
+  }
   console.log(nombre + " " + email + " " + telefono);
   // console.log("Enviando peticion...");
   cerrarModal(modal);
@@ -302,37 +311,37 @@ function enviarDatosAPI(modal) {
   switch (lang) {
     case "es-ES":
       window.chatbase.setInitialMessages([
-        `Hola ${nombre}!`,
+        `Hola!`,
         "¿En que puedo ayudarte hoy?",
       ]);
       break;
     case "fr-FR":
       window.chatbase.setInitialMessages([
-        `Bonjour ${nombre}!`,
-        "Comment puis-je vous aider aujourd'hui ?",
+        `Bonjour!`,
+        "Comment puis-je vous aider aujourd'hui?",
       ]);
       break;
     case "en-US":
       window.chatbase.setInitialMessages([
-        `Hello ${nombre}!`,
+        `Hello!`,
         "How can I help you today?",
       ]);
       break;
     case "it-IT":
       window.chatbase.setInitialMessages([
-        `Salve ${nombre}!`,
+        `Salve!`,
         "Come posso aiutarla oggi?",
       ]);
       break;
     case "pt-PT":
       window.chatbase.setInitialMessages([
-        `Olá ${nombre}!`,
+        `Olá!`,
         "Como posso ajudá-lo hoje?",
       ]);
       break;
     default:
       window.chatbase.setInitialMessages([
-        `Hello ${nombre}!`,
+        `Hello!`,
         "How can I help you today?",
       ]);
   }
@@ -352,6 +361,18 @@ function cerrarModal(modal) {
   document.getElementById("chatbase-bubble-window").style.visibility =
     "visible";
 }
+
+function validarCorreoElectronico(correo) {
+  // Expresión regular para validar correos electrónicos
+  const expresionRegular = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return expresionRegular.test(correo);
+}
+function validarNumeroTelefonico(numero) {
+  // Expresión regular para números de teléfono de 10 dígitos
+  const regex = /^\d{9}$/; 
+  return regex.test(numero); // test() retorna true si el número coincide con el patrón, false de lo contrario.
+}
+
 
 // const observer = new MutationObserver((mutations, obs) => {
 //     let iframe = document.querySelector('iframe[title="Chatbot"]');
