@@ -240,6 +240,22 @@ document.getElementById('confirmarRespuesta').addEventListener('click', function
       boton.textContent = t.lblsending;
       boton.style.backgroundColor = "#165a9d";
 
+        if  (lang==='es-ES'){
+            var pais="España";
+        }
+        else if (lang==='fr-FR"'){
+            var pais="Francia";
+        } 
+        else if (lang==='it-IT') {
+            var pais="Italia";
+        }
+        else if (lang==='pt-PT') {
+            var pais="Portugal";
+        }
+        else {
+            var pais="EEUU";
+        }
+
       // Llamada API
       fetch("https://nrapi.fmd.fagorhealthcare.com/v0/postAirtable", {
         method: "POST",
@@ -251,6 +267,7 @@ document.getElementById('confirmarRespuesta').addEventListener('click', function
             "Correo farmacia": email,
             historial: historial,
             solucionado: solucionado,
+            "pais":pais
           },
         }),
       })
