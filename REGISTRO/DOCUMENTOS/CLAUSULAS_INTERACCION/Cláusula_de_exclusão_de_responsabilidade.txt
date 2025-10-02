@@ -1,5 +1,5 @@
 Esta ferramenta de interação medicamentosa baseada em inteligência artificial destina-se apenas a fins informativos e a apoiar o trabalho do farmacêutico. Os dados e análises fornecidos não substituem de forma alguma o julgamento profissional e a avaliação clínica do farmacêutico ou do profissional de saúde.
 
-Embora nos esforcemos por fornecer informações exactas e actualizadas, não garantimos a exaustividade, exatidão ou aplicabilidade dos dados em todos os casos clínicos. A responsabilidade final pela avaliação, recomendação e dispensa de medicamentos cabe exclusivamente ao farmacêutico ou ao profissional de saúde em causa.
+Embora nos esforcemos por fornecer informações exatas e atualizadas, não garantimos a exaustividade, exatidão ou aplicabilidade dos dados em todos os casos clínicos. A responsabilidade final pela avaliação, recomendação e dispensa de medicamentos cabe exclusivamente ao farmacêutico ou ao profissional de saúde em causa.
 
 A utilização desta ferramenta implica a aceitação destas condições. O criador e os fornecedores desta ferramenta não assumem qualquer responsabilidade por quaisquer erros, omissões ou decisões tomadas com base nas informações fornecidas.
