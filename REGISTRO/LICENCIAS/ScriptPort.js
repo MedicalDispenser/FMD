@@ -150,13 +150,13 @@ $( "#form" ).submit(function( event ) {
 
 				}	
 
-				if (!expr2.test(idh)) {
+				//if (!expr2.test(idh)) {
 
-					msg_error = msg_error + '\nInsira um ID de hardware correto';
+					//msg_error = msg_error + '\nInsira um ID de hardware correto';
 
-					error = true;
+					//error = true;
 
-				}
+				//}
 
 		}
 
