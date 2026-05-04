@@ -36,6 +36,10 @@ $( "#form" ).submit(function( event ) {
 
 		var d = $('#direccion').val();
 
+		var pob = $('#poblacion').val();
+
+		var prov = $('#provincia').val();
+
 		var cp = $('#cp').val();
 
 		var t = $('#telefono').val();
@@ -207,7 +211,11 @@ $( "#form" ).submit(function( event ) {
 
 				    "tipo": "maquina",
 
-				    "NumeroSerie": nsm
+				    "NumeroSerie": nsm,
+
+				    "Poblacion": pob,
+
+				    "Provincia": prov
 
 				  }
 
@@ -241,7 +249,11 @@ $( "#form" ).submit(function( event ) {
 
 				    "NumeroSerie": nss,
 
-				    "idHardware": idh
+				    "idHardware": idh,
+
+				    "Poblacion": pob,
+
+				    "Provincia": prov
 
 				  }
 
