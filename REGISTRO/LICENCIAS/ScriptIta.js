@@ -36,6 +36,12 @@ $( "#form" ).submit(function( event ) {
 
 		var d = $('#direccion').val();
 
+		var pob = $('#poblacion').val();
+
+		var prov = $('#provincia').val();
+
+		var pec = $('#pec').val();
+
 		var cp = $('#cp').val();
 
 		var t = $('#telefono').val();
@@ -91,6 +97,14 @@ $( "#form" ).submit(function( event ) {
 		if (nif == "") {
 
 			msg_error = msg_error + '\nInserire il NIF';
+
+			error = true;
+
+		}
+
+		if (pec == "") {
+
+			msg_error = msg_error + '\nInserire il PEC';
 
 			error = true;
 
@@ -219,7 +233,13 @@ $( "#form" ).submit(function( event ) {
 
 				    "tipo": "maquina",
 
-				    "NumeroSerie": nsm
+				    "NumeroSerie": nsm,
+
+				    "Poblacion": pob,
+
+				    "Provincia": prov,
+
+				    "PEC": pec
 
 				  }
 
@@ -255,7 +275,13 @@ $( "#form" ).submit(function( event ) {
 
 				    "NumeroSerie": nss,
 
-				    "idHardware": idh
+				    "idHardware": idh,
+
+				    "Poblacion": pob,
+
+				    "Provincia": prov,
+
+				    "PEC": pec
 
 				  }
 
