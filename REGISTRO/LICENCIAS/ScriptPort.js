@@ -66,7 +66,7 @@ $( "#form" ).submit(function( event ) {
 
 		var expr2 = /^\d{14}$/;
 
-
+		var expr3 = /^(20|21)/;
 
 		if (n == "") {
 
@@ -136,7 +136,14 @@ $( "#form" ).submit(function( event ) {
 
 				if (!expr2.test(nsm)) {
 
-					msg_error = msg_error + '\nInsira um número de série correto';
+					msg_error = msg_error + '\nInsira um número de série da maquina correto';
+
+					error = true;
+
+				}
+				else if (!expr3.test(nsm)) {
+
+					msg_error = msg_error + '\nInsira um número de série da maquina correto';
 
 					error = true;
 
@@ -148,7 +155,7 @@ $( "#form" ).submit(function( event ) {
 
 				if (!expr2.test(nss)) {
 
-					msg_error = msg_error + '\nInsira um número de série correto';
+					msg_error = msg_error + '\nInsira um número de série do software correto';
 
 					error = true;
 
