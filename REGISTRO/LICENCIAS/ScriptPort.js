@@ -163,6 +163,8 @@ $( "#form" ).submit(function( event ) {
 				else if (expr3.test(nss)) {
 
 					msg_error = msg_error + '\nInsira um número de série do software correto';	
+
+					error = true;
 				}
 
 				//if (!expr2.test(idh)) {
