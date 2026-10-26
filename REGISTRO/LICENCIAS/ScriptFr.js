@@ -46,6 +46,8 @@ $( "#form" ).submit(function( event ) {
 
 		var e = $('#email').val();
 
+		var dist = $('#distribuidor').val();
+
 		var nif = $('#nif').val();
 
 		var nsm = $('#numeroSerieMaquina').val();
@@ -63,6 +65,8 @@ $( "#form" ).submit(function( event ) {
 		var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 		var expr2 = /^\d{14}$/;
+
+		var expr3 = /^(20|21)/;
 
 
 
@@ -85,6 +89,14 @@ $( "#form" ).submit(function( event ) {
 		if (d == "") {
 
 			msg_error = msg_error + '\nEntrez votre adresse';
+
+			error = true;
+
+		}
+
+		if (dist == "") {
+
+			msg_error = msg_error + '\nEntrez votre code revendeur';
 
 			error = true;
 
@@ -126,7 +138,14 @@ $( "#form" ).submit(function( event ) {
 
 				if (!expr2.test(nsm)) {
 
-					msg_error = msg_error + '\nEntrez un numéro de série correct';
+					msg_error = msg_error + '\nEntrez un numéro de série de la machine correct';
+
+					error = true;
+
+				}
+				else if (!expr3.test(nsm)) {
+
+					msg_error = msg_error + '\nEntrez un numéro de série de la machine correct';
 
 					error = true;
 
@@ -138,19 +157,25 @@ $( "#form" ).submit(function( event ) {
 
 				if (!expr2.test(nss)) {
 
-					msg_error = msg_error + '\nEntrez un numéro de série correct';
-
-					error = true;
-
-				}	
-
-				if (!expr2.test(idh)) {
-
-					msg_error = msg_error + '\nEntrez un ID matériel correct';
+					msg_error = msg_error + '\nEntrez un numéro de série du logiciel correct';
 
 					error = true;
 
 				}
+				else if (expr3.test(nss)) {
+
+					msg_error = msg_error + '\nEntrez un numéro de série du logiciel correct';	
+
+					error = true;
+				}	
+
+				//if (!expr2.test(idh)) {
+
+					//msg_error = msg_error + '\nEntrez un ID matériel correct';
+
+					//error = true;
+
+				//}
 
 		}
 
@@ -209,6 +234,8 @@ $( "#form" ).submit(function( event ) {
 
 				    "NIFFarmacia": nif,
 
+				    "CodigoInstalador": dist,
+
 				    "tipo": "maquina",
 
 				    "NumeroSerie": nsm,
@@ -244,6 +271,8 @@ $( "#form" ).submit(function( event ) {
 				    "Email": e,
 
 				    "NIFFarmacia": nif,
+
+				    "CodigoInstalador": dist,
 
 				    "tipo": "software",
 
